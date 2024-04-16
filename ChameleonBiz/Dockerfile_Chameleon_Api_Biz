@@ -1,0 +1,17 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /source
+
+COPY . ./
+
+RUN dotnet restore ./Chameleon.Api.Biz/Chameleon.Api.Biz.csproj
+RUN dotnet publish --no-restore --configuration Release --output /publish ./Chameleon.Api.Biz/Chameleon.Api.Biz.csproj
+
+# final stage/image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+
+COPY --from=build /publish ./
+
+EXPOSE 5000
+ENTRYPOINT ["dotnet", "Chameleon.Api.Biz.dll"]
