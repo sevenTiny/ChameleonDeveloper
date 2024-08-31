@@ -11,27 +11,21 @@ const contentStyle: React.CSSProperties = {
 };
 
 const App: React.FC = () => {
-    const onChange = (currentSlide: number) => {
-        console.log(currentSlide);
-    };
-
     return (
-        <div style={{ padding: 20 }}>
-            <Carousel autoplay afterChange={onChange}>
-                <div>
-                    <h3 style={{ ...contentStyle, background: '#364d79' }}>1</h3>
-                </div>
-                <div>
-                    <h3 style={{ ...contentStyle, background: '#53b1aa' }}>2</h3>
-                </div>
-                <div>
-                    <h3 style={{ ...contentStyle, background: '#65b153' }}>3</h3>
-                </div>
-                <div>
-                    <h3 style={{ ...contentStyle, background: '#b1a153' }}>4</h3>
-                </div>
-            </Carousel>
-        </div>
+        <Carousel>
+            <div>
+                <h3 style={contentStyle}>1</h3>
+            </div>
+            <div>
+                <h3 style={contentStyle}>2</h3>
+            </div>
+            <div>
+                <h3 style={contentStyle}>3</h3>
+            </div>
+            <div>
+                <h3 style={contentStyle}>4</h3>
+            </div>
+        </Carousel>
     );
 };
 

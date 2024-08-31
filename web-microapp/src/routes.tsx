@@ -5,6 +5,8 @@ import StepPage from "./Pages/StepPage"
 import TypographyPage from "./Pages/TypographyPage"
 import CarouselPage from "./Pages/CarouselPage"
 import CascaderPage from "./Pages/CascaderPage"
+import TimelinePage from './Pages/TimelinePage';
+import CountdownPage from './Pages/CountdownPage';
 
 const routes: RouteObject[] = [
     {
@@ -30,6 +32,14 @@ const routes: RouteObject[] = [
     {
         path: '/cascaderpage',
         element: <CascaderPage />,
+    },
+    {
+        path: '/timelinepage',
+        element: <TimelinePage />,
+    },
+    {
+        path: '/countdownpage',
+        element: <CountdownPage />,
     },
     // 其他路由...  
     {
