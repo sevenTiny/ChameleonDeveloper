@@ -13,6 +13,6 @@ ENV NODE_OPTIONS --openssl-legacy-provider
 RUN tyarn run build
 
 FROM nginx
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /build /usr/share/nginx/html
 COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
