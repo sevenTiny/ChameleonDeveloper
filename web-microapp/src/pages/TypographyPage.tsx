@@ -1,11 +1,16 @@
 import React from 'react';
 import { Divider, Typography } from 'antd';
+import { useModel } from 'umi';
 
 const { Title, Paragraph, Text, Link } = Typography;
 
 const blockContent = `此外，Chameleon PaaS还注重安全与合规性，提供了多层安全防护措施，包括数据加密、访问控制、身份认证等，确保用户数据的安全无忧。同时，平台支持多种云环境部署，无论是公有云、私有云还是混合云，都能实现无缝对接，满足企业多样化的IT架构需求。`;
 
 const App: React.FC = () => {
+  // 可以通过这种方式来获取主应用传递过来的数据
+  const masterProps = useModel('@@qiankunStateFromMaster');
+  console.log('masterStates=', masterProps.masterState);
+
   return (
     <Typography>
       <Title>Introduction</Title>

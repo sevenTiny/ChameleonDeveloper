@@ -8,8 +8,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Chameleon.Database" Version="1.0.14" />
-		<PackageReference Include="Chameleon.Common" Version="1.0.57" />
+		<PackageReference Include="Chameleon.Database" Version="1.0.31" />
+		<PackageReference Include="Chameleon.Common" Version="1.0.87" />
 	</ItemGroup>
 
 </Project>
