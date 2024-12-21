@@ -1,11 +1,22 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
+  hash: true,
   antd: {},
   access: {},
   model: {},
   initialState: {},
   request: {},
+  headScripts: [
+    // 解决首次加载时白屏的问题
+    {
+      src: '/scripts/loading.js',
+      async: true,
+    },
+  ],
+  mfsu: {
+    strategy: 'normal',
+  },
   layout: {
     title: '@umijs/max',
   },
