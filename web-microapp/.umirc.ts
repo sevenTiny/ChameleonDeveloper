@@ -7,13 +7,7 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
-  headScripts: [
-    // 解决首次加载时白屏的问题
-    {
-      src: '/scripts/loading.js',
-      async: true,
-    },
-  ],
+  headScripts: [],
   mfsu: {
     strategy: 'normal',
   },
