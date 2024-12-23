@@ -19,6 +19,7 @@ export default defineConfig({
     },
   },
   routes: [
+    // demo
     {
       path: '/',
       redirect: '/home',
@@ -45,37 +46,37 @@ export default defineConfig({
     {
       name: 'steppage',
       path: '/steppage',
-      component: './StepPage',
+      component: './Demo/StepPage',
       layout: false,
     },
     {
       name: 'typographypage',
       path: '/typographypage',
-      component: './TypographyPage',
+      component: './Demo/TypographyPage',
       layout: false,
     },
     {
       name: 'carouselpage',
       path: '/carouselpage',
-      component: './CarouselPage',
+      component: './Demo/CarouselPage',
       layout: false,
     },
     {
       name: 'cascaderpage',
       path: '/cascaderpage',
-      component: './CascaderPage',
+      component: './Demo/CascaderPage',
       layout: false,
     },
     {
       name: 'timelinepage',
       path: '/timelinepage',
-      component: './TimelinePage',
+      component: './Demo/TimelinePage',
       layout: false,
     },
     {
       name: 'countdownpage',
       path: '/countdownpage',
-      component: './CountdownPage',
+      component: './Demo/CountdownPage',
       layout: false,
     }
   ],
